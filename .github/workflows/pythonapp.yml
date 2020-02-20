@@ -20,6 +20,10 @@ jobs:
     - name: run script
       run: |
         python shanbei.py
+    - name: generate ffmpeg input for concat
+      run: python generate_name.py
+    - name: concat files
+      run: ffmpeg -f concat -safe 0 -i filenamelist.txt -ab 192k output.mp3
     - name: Upload result for job 
       uses: actions/upload-artifact@v1
       with:
