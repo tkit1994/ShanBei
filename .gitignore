@@ -1,4 +1,5 @@
 .vscode
 *.mp3
+!/space.mp3
 .venv
 download/

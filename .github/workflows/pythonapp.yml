@@ -17,12 +17,23 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        sudo apt install ffmpeg
     - name: run script
-      run: |
-        python shanbei.py
+      run: python shanbei.py
+    - name: count words
+      run: find ./download/ -name '*.mp3'  |   wc -l | xargs -I{} echo "There are {} words in all"
+    - name: generate ffmpeg input for concat
+      run: python generate_name.py
+    - name: concat files
+      run: ffmpeg -f concat -safe 0 -i filenamelist.txt -ab 192k output.mp3
     - name: Upload result for job 
       uses: actions/upload-artifact@v1
       with:
         name: download
         path: ./download
+    - name: Upload concated file for job 
+      uses: actions/upload-artifact@v1
+      with:
+        name: output.mp3
+        path: ./output.mp3
 
