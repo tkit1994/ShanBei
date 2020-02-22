@@ -11,11 +11,6 @@ twig
 ablaze
 vacate
 explosion
-virtue
-course
-feudal
-sustenance
-tend
 charcoal
 offer
 axis
