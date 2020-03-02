@@ -11,6 +11,11 @@ twig
 ablaze
 vacate
 explosion
+virtue
+course
+feudal
+sustenance
+tend
 charcoal
 offer
 axis
@@ -20,6 +25,15 @@ audio
 caterpillar
 rash
 appeal
+modify
+diversity
+comprehend
+timber
+astute
+uniform
+luminous
+tavern
+conciliate
 devout
 gait
 gouge
