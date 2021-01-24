@@ -18,7 +18,7 @@ def parse_args():
     parser.add_argument(
         "-s", "--save_dir", type=str, help="output directory", default="./download")
     parser.add_argument(
-        "-t", "--threads", type=int, help="number of threads to use for downloading", default=1)
+        "-t", "--threads", type=int, help="number of threads to use for downloading", default=5)
     return parser.parse_args()
 
 
