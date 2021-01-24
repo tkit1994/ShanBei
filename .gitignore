@@ -3,3 +3,5 @@
 !/space.mp3
 .venv
 download/
+*.pyc
+filenamelist.txt
