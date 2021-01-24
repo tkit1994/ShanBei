@@ -25,6 +25,13 @@ jobs:
         sudo apt install ffmpeg
     - name: run backend node server
       run: cd node && npm i && node main.js &
+    - name: Waiting for server
+      run: |
+        while ! curl -s "http://localhost:1088/" | sh -c "jq .status | grep ready"; do
+          echo -n '.'
+          sleep 1
+        done
+        echo "Done wait for server"
     - name: run script
       run: python shanbei.py
     - name: count words
