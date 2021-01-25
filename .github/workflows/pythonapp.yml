@@ -33,6 +33,8 @@ jobs:
         done
         echo "Done wait for server"
     - name: run script
+      env:
+        COOKIES: ${{secrets.COOKIES}}
       run: python shanbei.py
     - name: count words
       run: find ./download/ -name '*.mp3'  |   wc -l | xargs -I{} echo "There are {} words in all"
