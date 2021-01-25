@@ -32,10 +32,9 @@ jobs:
           sleep 1
         done
         echo "Done wait for server"
-    - name: set environment
+    - name: run script
       env:
         COOKIES: ${{secrets.COOKIES}}
-    - name: run script
       run: python shanbei.py
     - name: count words
       run: find ./download/ -name '*.mp3'  |   wc -l | xargs -I{} echo "There are {} words in all"
