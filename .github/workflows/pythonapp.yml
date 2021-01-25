@@ -32,6 +32,9 @@ jobs:
           sleep 1
         done
         echo "Done wait for server"
+    - name: set environment
+      env:
+        COOKIES: ${{secrets.COOKIES}}
     - name: run script
       run: python shanbei.py
     - name: count words
