@@ -48,8 +48,10 @@ class ShanBeiWord(object):
     def download(self):
         if self.verbose:
             print("Downloading {}..".format(self.word))
+            print(self.download_url)
         urlretrieve(self.download_url["audio_us_urls"][0], os.path.join(
             self.savedir, self.word + ".mp3"))
+        
 
 
 def work(word):
