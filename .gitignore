@@ -5,3 +5,4 @@
 download/
 *.pyc
 filenamelist.txt
+node_modules

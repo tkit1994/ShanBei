@@ -40,6 +40,8 @@ jobs:
       run: find ./download/ -name '*.mp3'  |   wc -l | xargs -I{} echo "There are {} words in all"
     - name: generate ffmpeg input for concat
       run: python generate_name.py
+    - name: convert aac to mp3 codec
+      run: for i in ./download/*.aac; do ffmpeg -i $i "${i%.*}.mp3" -y;done
     - name: concat files
       run: ffmpeg -f concat -safe 0 -i filenamelist.txt -ab 192k output.mp3
     - name: Upload result for job 

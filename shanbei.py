@@ -40,16 +40,25 @@ class ShanBeiWord(object):
         self.word = word
         self.verbose = verbose
         url = self.API_URL + word
-        result = requests.get(url, cookies=cookies2dict(os.getenv("COOKIES"))).json()
+        result = requests.get(url, cookies=cookies2dict(
+            os.getenv("COOKIES"))).json()
         result = requests.post(
             "http://localhost:1088/decode", json=result).json()
-        self.download_url = result["data"]["sound"]
+        self.audio_urls = result["data"]["sound"]
+
+    @property
+    def download_url(self):
+        return self.audio_urls["audio_us_urls"][0]
+
+    @property
+    def audio_ext(self):
+        return os.path.splitext(self.download_url)[1]
 
     def download(self):
         if self.verbose:
             print("Downloading {}..".format(self.word))
-        urlretrieve(self.download_url["audio_us_urls"][0], os.path.join(
-            self.savedir, self.word + ".mp3"))
+        urlretrieve(self.download_url, os.path.join(
+            self.savedir, self.word + self.audio_ext))
 
 
 def work(word):
