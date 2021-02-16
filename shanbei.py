@@ -50,7 +50,7 @@ class ShanBeiWord(object):
             print("Downloading {}..".format(self.word))
             print(self.download_url)
         urlretrieve(self.download_url["audio_us_urls"][0], os.path.join(
-            self.savedir, self.word + ".mp3"))
+            self.savedir, self.word + '.' + self.download_url["audio_us_urls"][0].split('.')[1]))
         
 
 
