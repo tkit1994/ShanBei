@@ -35,7 +35,7 @@ jobs:
     - name: run script
       env:
         COOKIES: ${{secrets.COOKIES}}
-      run: python shanbei.py
+      run: python shanbei.py -v
     - name: count words
       run: find ./download/ -name '*.mp3'  |   wc -l | xargs -I{} echo "There are {} words in all"
     - name: generate ffmpeg input for concat
