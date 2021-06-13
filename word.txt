@@ -1,3 +1,2 @@
-geographical
-perimeter
-discriminate
+apple
+pear
