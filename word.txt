@@ -65,7 +65,7 @@ local
 compromise
 rally
 feather
-characterize...
+characterize
 explode
 aware
 grain
@@ -97,7 +97,7 @@ fade
 sunset
 singular
 broom
-beneath...
+beneath
 recreation
 procession
 tackle
