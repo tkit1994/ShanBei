@@ -81,7 +81,7 @@ nurse
 nursery
 nut
 ocean
-o'clock
+clock
 office
 officer
 oh
