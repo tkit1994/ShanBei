@@ -165,7 +165,7 @@ ancient
 exam
 sharp
 chain
-store(s)
+stores
 anybody
 few
 favourite
@@ -180,7 +180,7 @@ labour
 urgent
 love
 carry
-outward(s)
+outwards
 wonder
 vacation
 tear
@@ -194,7 +194,7 @@ command
 examine
 amazing
 full
-eastward(s)
+eastwards
 run
 demand
 accuse
