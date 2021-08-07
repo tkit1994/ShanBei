@@ -1,7 +1,6 @@
 subway
 magnet
 attribute
-release
 succession
 chip
 doctoral
