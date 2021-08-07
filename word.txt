@@ -1,6 +1,5 @@
 subway
 magnet
-defect
 attribute
 release
 succession
