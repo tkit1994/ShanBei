@@ -1,5 +1,4 @@
 helpful
-general
 root
 little
 problem
